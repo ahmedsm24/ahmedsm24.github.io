@@ -6,6 +6,7 @@ body {
     color: #333;
     line-height: 1.6;
     background-color: #f9f9f9;
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -19,39 +20,43 @@ body {
     background: linear-gradient(to right, #0078D7, #0056A8);
     color: white;
     text-align: center;
-    padding: 5rem 2rem;
+    padding: 6rem 2rem;
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     margin: 0;
     font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .hero .subtitle {
     font-size: 1.5rem;
-    margin: 1rem 0;
+    margin: 1.5rem 0;
     font-weight: 400;
+    opacity: 0.9;
 }
 
 .btn-primary {
     display: inline-block;
     background: #FF6F61;
     color: white;
-    padding: 0.8rem 2rem;
-    margin-top: 1.5rem;
+    padding: 1rem 2.5rem;
+    margin-top: 2rem;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .btn-primary:hover {
     background: #FF4B3E;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
 }
 
 /* Navbar */
@@ -80,17 +85,27 @@ body {
     padding: 1rem 2rem;
     font-weight: 500;
     display: inline-block;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .navbar ul li a:hover {
     background: #575757;
+    color: #FF6F61;
     border-radius: 5px;
 }
 
 /* Section Styles */
 section {
     padding: 4rem 0;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #0078D7;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
 .about-section,
@@ -100,19 +115,13 @@ section {
     border-top: 2px solid #ddd;
 }
 
-.about-section h2,
-.contact-section h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #0078D7;
-}
-
 .about-section p,
 .contact-section p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.8;
     margin: 0 auto;
     max-width: 800px;
+    opacity: 0.9;
 }
 
 /* Experience Section */
@@ -120,25 +129,24 @@ section {
     background: #fff;
 }
 
-.experience-section h2 {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #0078D7;
-}
-
 .experience {
     margin-bottom: 2rem;
-    padding: 1rem 1.5rem;
+    padding: 1.5rem;
     border: 1px solid #ddd;
     border-radius: 8px;
     background: #f9f9f9;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .experience h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
     color: #333;
 }
 
@@ -148,19 +156,13 @@ section {
 }
 
 .experience ul li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
 }
 
 /* Projects Section */
 .projects-section {
     text-align: center;
     background: #f9f9f9;
-}
-
-.projects-section h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: #0078D7;
 }
 
 .project-grid {
@@ -186,29 +188,55 @@ section {
 }
 
 .project-card h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
 }
 
 .project-card p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin-bottom: 1rem;
     color: #666;
+    opacity: 0.9;
 }
 
 .btn-secondary {
     display: inline-block;
     background: #0078D7;
     color: white;
-    padding: 0.5rem 1.5rem;
+    padding: 0.6rem 1.8rem;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .btn-secondary:hover {
     background: #0056A8;
+    transform: translateY(-3px);
+}
+
+/* Publications Section */
+.publications-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: left;
+}
+
+.publications-section ul li {
+    background: #fff;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.publications-section ul li:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Footer */
@@ -218,8 +246,10 @@ section {
     text-align: center;
     padding: 1.5rem 0;
     border-top: 2px solid #0078D7;
+    opacity: 0.9;
 }
 
 .footer p {
     margin: 0;
+    font-size: 1rem;
 }
