@@ -3,51 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional Portfolio Website">
-    <meta name="author" content="Your Name">
-    <title>Professional Portfolio</title>
+    <meta name="description" content="Ahmed Abdul Naoman's Professional Portfolio">
+    <meta name="author" content="Ahmed Abdul Naoman">
+    <title>Ahmed Abdul Naoman | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="hero">
         <div class="container">
-            <h1>Your Name</h1>
-            <p>Your Profession | Skills | Motto</p>
+            <h1>Ahmed Abdul Naoman</h1>
+            <p class="subtitle">MS in Computer Science (AI) | Experienced in Sitecore & Software Development</p>
+            <a href="#contact" class="btn-primary">Get in Touch</a>
         </div>
     </header>
-    <nav>
+    <nav class="navbar">
         <ul>
             <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
     <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Write a brief description about yourself, your skills, and experience.</p>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>Brief description of the project.</p>
-                <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
-            </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Brief description of the project.</p>
-                <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a>
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>I am a graduate student at Southern Methodist University, pursuing a Master of Science in Computer Science with a focus on Artificial Intelligence. With strong expertise in Python, Java, and Sitecore CMS development, I have a proven track record of delivering high-impact projects and collaborating with cross-functional teams to achieve goals.</p>
             </div>
         </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+        <section id="experience" class="experience-section">
+            <div class="container">
+                <h2>Work Experience</h2>
+                <div class="experience">
+                    <h3>Sitecore Development Intern</h3>
+                    <p><strong>Qatar Development Bank | Doha, Qatar | Dec 2023 – May 2024</strong></p>
+                    <ul>
+                        <li>Enhanced Sitecore CMS proficiency by executing template customization and component development.</li>
+                        <li>Implemented workflows to improve user experience and operational efficiency.</li>
+                    </ul>
+                </div>
+                <div class="experience">
+                    <h3>Software Intern</h3>
+                    <p><strong>PMOBytes | Doha, Qatar | May 2023 – Nov 2023</strong></p>
+                    <ul>
+                        <li>Developed and deployed an e-commerce platform using ITIL-4 Foundation principles.</li>
+                        <li>Collaborated with the Business Development team to deliver robust IT solutions.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h3>Detect DUI</h3>
+                        <p>Developed an in-car detection system for drunk driving, integrating sensor technology and machine learning for real-time BAC level detection.</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Food Quality Prediction</h3>
+                        <p>Designed a CAI system leveraging computer vision and machine learning to predict quality characteristics in food technology.</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Facial Recognition for Social Schemes</h3>
+                        <p>Created a facial recognition app for the Ministry of Rural Development to digitize government schemes, presented at Smart India Hackathon 2022.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Contact</h2>
+                <p>If you’d like to collaborate or have inquiries, feel free to reach out!</p>
+                <ul>
+                    <li>Email: <a href="mailto:ahmedabdulnaomanl@smu.edu">ahmedabdulnaomanl@smu.edu</a></li>
+                    <li>LinkedIn: <a href="https://linkedin.com/in/aanaoman" target="_blank">linkedin.com/in/aanaoman</a></li>
+                </ul>
+            </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Ahmed Abdul Naoman. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>

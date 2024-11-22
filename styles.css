@@ -1,77 +1,225 @@
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    color: #333;
     line-height: 1.6;
+    background-color: #f9f9f9;
 }
 
-header {
-    background: #0078D7;
-    color: #fff;
-    padding: 1.5rem 0;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.hero {
+    background: linear-gradient(to right, #0078D7, #0056A8);
+    color: white;
     text-align: center;
+    padding: 5rem 2rem;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-nav ul {
+.hero h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+.hero .subtitle {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    font-weight: 400;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: #FF6F61;
+    color: white;
+    padding: 0.8rem 2rem;
+    margin-top: 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #FF4B3E;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Navbar */
+.navbar {
     background: #333;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
     list-style: none;
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0;
-}
-
-nav ul li a {
-    color: #fff;
+.navbar ul li {
     display: inline-block;
-    padding: 1rem 2rem;
+}
+
+.navbar ul li a {
+    color: white;
     text-decoration: none;
+    padding: 1rem 2rem;
+    font-weight: 500;
+    display: inline-block;
+    transition: background 0.3s ease;
 }
 
-nav ul li a:hover {
+.navbar ul li a:hover {
     background: #575757;
-}
-
-.container {
-    max-width: 1100px;
-    margin: auto;
-    overflow: hidden;
-    padding: 0 2rem;
-}
-
-main {
-    padding: 2rem 0;
-}
-
-section {
-    margin: 2rem 0;
-}
-
-h1, h2, h3 {
-    margin: 0;
-    padding: 0;
-}
-
-.project {
-    margin: 1.5rem 0;
-    padding: 1rem;
-    border: 1px solid #ddd;
     border-radius: 5px;
-    background: #f9f9f9;
 }
 
-.project h3 {
+/* Section Styles */
+section {
+    padding: 4rem 0;
+}
+
+.about-section,
+.contact-section {
+    background: #f4f4f4;
+    text-align: center;
+    border-top: 2px solid #ddd;
+}
+
+.about-section h2,
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #0078D7;
+}
+
+.about-section p,
+.contact-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+/* Experience Section */
+.experience-section {
+    background: #fff;
+}
+
+.experience-section h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #0078D7;
+}
+
+.experience {
+    margin-bottom: 2rem;
+    padding: 1rem 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.experience h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.experience ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+}
+
+.experience ul li {
     margin-bottom: 0.5rem;
 }
 
-footer {
-    background: #333;
-    color: #fff;
+/* Projects Section */
+.projects-section {
     text-align: center;
+    background: #f9f9f9;
+}
+
+.projects-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #0078D7;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
     padding: 1rem 0;
-    margin-top: 2rem;
+}
+
+.project-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    background: #fff;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.btn-secondary {
+    display: inline-block;
+    background: #0078D7;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: #0056A8;
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    border-top: 2px solid #0078D7;
+}
+
+.footer p {
+    margin: 0;
 }
